@@ -1,0 +1,17 @@
+Structured Query Language, or SQL, is used to interact with relational databases. It allows users to query, insert, update, and delete data.
+
+A basic SQL query uses the SELECT statement to retrieve data from a table. The WHERE clause filters rows based on conditions. For example, a query can select all users where age is greater than 30.
+
+Joins are used to combine data from multiple tables. The most common types are INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN. An INNER JOIN returns rows with matching values in both tables, while a LEFT JOIN returns all rows from the left table and matching rows from the right table.
+
+Aggregation functions such as COUNT, SUM, AVG, MIN, and MAX are used to perform calculations on groups of rows. The GROUP BY clause groups rows that have the same values in specified columns.
+
+Indexes improve query performance by allowing the database to locate rows more quickly. However, indexes also add overhead for write operations, so they must be used judiciously.
+
+Normalization is the process of organizing data to reduce redundancy and improve data integrity. It involves dividing large tables into smaller ones and defining relationships between them.
+
+Transactions ensure that a series of database operations are executed reliably. They follow ACID properties: Atomicity, Consistency, Isolation, and Durability. These properties ensure that database operations are completed fully and correctly.
+
+Window functions allow calculations across a set of rows related to the current row. Examples include ROW_NUMBER, RANK, and running totals. These are commonly used in analytics queries.
+
+Optimizing SQL queries involves analyzing execution plans, reducing unnecessary joins, and ensuring proper indexing. Writing efficient queries is critical for performance in large-scale systems.
