@@ -1,13 +1,43 @@
-Machine learning is a subset of artificial intelligence that focuses on building systems that can learn from data rather than being explicitly programmed. The goal is to create models that can generalize from historical data to make predictions or decisions on new, unseen data.
+Overfitting is a common machine learning problem where a model performs extremely well on training data but fails to generalize to unseen data. This happens because the model memorizes patterns and noise in the training dataset rather than learning meaningful underlying relationships. Common techniques to reduce overfitting include regularization, dropout, collecting more data, cross-validation, and early stopping.
 
-There are three main types of machine learning: supervised learning, unsupervised learning, and reinforcement learning. In supervised learning, models are trained on labeled data, meaning each training example includes the correct output. Common tasks include regression and classification. Regression predicts continuous values, such as house prices, while classification predicts discrete labels, such as spam vs non-spam.
+Underfitting occurs when a model is too simple to capture the underlying patterns in data. An underfit model performs poorly on both training and test datasets. Increasing model complexity, adding features, or training longer may help address underfitting.
 
-Unsupervised learning works with unlabeled data and tries to find hidden patterns or structures. Clustering and dimensionality reduction are common techniques. Clustering groups similar data points together, while dimensionality reduction simplifies data while preserving important information.
+Bias refers to errors introduced by overly simplistic assumptions in the learning algorithm. Variance refers to sensitivity to fluctuations in the training data. High bias often leads to underfitting, while high variance often leads to overfitting. The bias-variance tradeoff is a core concept in machine learning.
 
-Reinforcement learning involves an agent interacting with an environment and learning through rewards and penalties. The agent takes actions and receives feedback, optimizing its behavior over time to maximize cumulative reward.
+Cross-validation is a technique used to evaluate model performance more reliably. In k-fold cross-validation, the dataset is split into k subsets. The model trains on k-1 folds and validates on the remaining fold. This process repeats multiple times, reducing dependence on a single train-test split.
 
-A typical machine learning workflow includes data collection, data cleaning, feature engineering, model selection, training, evaluation, and deployment. Feature engineering involves transforming raw data into meaningful inputs for models. Model evaluation uses metrics such as accuracy, precision, recall, and F1 score.
+Feature engineering is the process of transforming raw data into useful features that improve model performance. Common feature engineering techniques include one-hot encoding, normalization, scaling, binning, and interaction features.
 
-Overfitting is a common problem where a model performs well on training data but poorly on new data. Techniques such as cross-validation, regularization, and using more data can help mitigate overfitting. Underfitting occurs when a model is too simple to capture underlying patterns.
+Regularization techniques help prevent overfitting by penalizing model complexity. L1 regularization encourages sparsity by shrinking some coefficients to zero. L2 regularization penalizes large weights but typically does not eliminate features completely.
 
-Model deployment involves integrating the trained model into a production system where it can serve predictions. Monitoring is essential to ensure the model continues to perform well over time as data distributions change.
+Gradient descent is an optimization algorithm used to minimize loss functions in machine learning. It works by iteratively adjusting model parameters in the direction of the negative gradient. Variants include stochastic gradient descent, mini-batch gradient descent, and Adam optimization.
+
+Precision measures the percentage of positive predictions that are actually correct. Recall measures the percentage of actual positives identified correctly. F1 score combines precision and recall into a single metric using the harmonic mean.
+
+A confusion matrix is commonly used to evaluate classification models. It contains true positives, true negatives, false positives, and false negatives.
+
+ROC-AUC measures how well a classifier separates classes across multiple thresholds. Higher AUC values generally indicate better model performance.
+
+Decision trees split data into branches based on feature conditions. Random forests improve performance by combining multiple decision trees trained on random subsets of data.
+
+XGBoost is a gradient boosting framework known for high performance in structured tabular datasets. It builds trees sequentially where each new tree attempts to correct errors from previous trees.
+
+Neural networks consist of layers of interconnected neurons that learn hierarchical representations from data. Deep learning refers to neural networks with many hidden layers.
+
+Dropout is a regularization technique used in neural networks where random neurons are disabled during training to reduce overfitting.
+
+Batch normalization helps stabilize and accelerate neural network training by normalizing activations within mini-batches.
+
+Transfer learning involves taking a pretrained model and fine-tuning it for a related task. This approach is especially effective when labeled data is limited.
+
+Embeddings are dense vector representations of data that capture semantic meaning. Similar concepts tend to have similar embeddings in vector space.
+
+Transformers are deep learning architectures based on self-attention mechanisms. Large language models such as GPT are built using transformer architectures.
+
+Self-attention allows models to weigh relationships between different words in a sequence. Multi-head attention enables the model to learn multiple relationships simultaneously.
+
+Inference refers to using a trained model to make predictions. Training refers to the process of learning model parameters from data.
+
+Data leakage occurs when information from the test set unintentionally influences the training process, leading to overly optimistic evaluation results.
+
+Class imbalance occurs when one class significantly outnumbers another in the dataset. Techniques such as oversampling, undersampling, and weighted losses can help address imbalance.

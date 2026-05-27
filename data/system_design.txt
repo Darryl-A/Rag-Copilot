@@ -1,17 +1,41 @@
-System design involves creating scalable, reliable, and maintainable systems that can handle real-world workloads. It requires understanding both high-level architecture and low-level implementation details.
+An ML pipeline typically includes data ingestion, preprocessing, feature engineering, training, evaluation, deployment, monitoring, and retraining.
 
-A key concept in system design is scalability, which refers to a system’s ability to handle increased load. There are two main types: vertical scaling and horizontal scaling. Vertical scaling involves adding more resources to a single machine, while horizontal scaling involves adding more machines to distribute the load.
+Batch inference processes data at scheduled intervals, while online inference serves predictions in real time with low latency.
 
-Load balancing is used to distribute incoming requests across multiple servers. This prevents any single server from becoming a bottleneck. Common load balancing strategies include round robin and least connections.
+Feature stores centralize feature computation and storage to ensure consistency between training and inference environments.
 
-Caching is another important concept. Frequently accessed data is stored in a fast storage layer to reduce latency and database load. Examples include in-memory caches such as Redis. Cache invalidation is a challenging problem and must be handled carefully to ensure data consistency.
+Model drift occurs when data distributions change over time, reducing model performance. Drift monitoring is essential in production systems.
 
-Databases are a core component of most systems. Relational databases store structured data with predefined schemas, while NoSQL databases provide flexibility for unstructured or semi-structured data. Choosing the right database depends on the use case.
+Concept drift refers to changes in relationships between features and labels. Data drift refers to changes in input data distribution.
 
-Consistency, availability, and partition tolerance are described by the CAP theorem. In distributed systems, it is impossible to guarantee all three simultaneously. Engineers must make trade-offs based on system requirements.
+A training-serving skew occurs when training data differs from production inference data.
 
-Microservices architecture breaks down applications into smaller, independent services that communicate over APIs. This improves modularity and scalability but introduces challenges such as service coordination and network latency.
+Latency is a key metric in online ML systems. Low-latency systems often require optimized models, caching, and scalable infrastructure.
 
-Monitoring and logging are essential for maintaining system health. Metrics such as latency, error rate, and throughput help identify performance issues. Logs provide detailed insights into system behavior and failures.
+Scalability in ML systems involves handling increasing workloads efficiently. Common approaches include horizontal scaling, distributed systems, and asynchronous processing.
 
-Fault tolerance ensures that a system continues to operate even when components fail. Techniques include replication, retries, and circuit breakers. Designing for failure is a key principle in distributed systems.
+Model versioning allows teams to track, deploy, and roll back different model versions safely.
+
+Canary deployments gradually release models to small user groups before full rollout.
+
+A/B testing compares multiple models or product variants using controlled experiments.
+
+Monitoring metrics in production may include latency, throughput, error rate, prediction distribution, and business KPIs.
+
+Retrieval-Augmented Generation combines information retrieval with language models. Relevant documents are retrieved first and passed into an LLM as context.
+
+Vector databases store embeddings and enable semantic similarity search. Popular vector databases include Pinecone, Weaviate, Milvus, and FAISS.
+
+Chunking is the process of splitting large documents into smaller semantic sections for embeddings and retrieval.
+
+Metadata improves retrieval quality by attaching additional information such as source, author, or document type.
+
+Reranking improves retrieval precision by rescoring retrieved documents using a secondary model.
+
+Hallucination occurs when an LLM generates inaccurate or unsupported information. Grounding models using retrieval helps reduce hallucinations.
+
+Caching can significantly reduce inference costs and latency in LLM applications.
+
+Prompt engineering involves designing prompts that guide LLM behavior effectively.
+
+Fine-tuning modifies model weights using domain-specific datasets, while prompting relies on pretrained knowledge without weight updates.
