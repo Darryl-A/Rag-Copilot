@@ -18,6 +18,7 @@ def main():
             break
 
         retrieved_chunks = search(query, index, chunks)
+        print("DEBUG retrieved chunks:", retrieved_chunks)
         for i, chunk in enumerate(retrieved_chunks):
             print(f"\nResult {i+1})")
             print("Source:" + chunk['source'])
